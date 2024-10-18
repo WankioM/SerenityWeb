@@ -1,0 +1,25 @@
+.cnt{
+    position: relative;
+    overflow: hidden;
+
+}
+.headrect{
+    background-color: red;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+}
+
+.bodypoly{
+    width: 100vw;
+    height: 500px; 
+    margin:20px;
+    background-color: #668EB3;
+    clip-path: path('M 0 15 L 75 15 C 77 15 79 13 80 11 L 84 0 H 100 V 100 H 0 Z');
+    
+    /*clip-path: polygon(0 15%, 80% 15%,84% 0, 100% 0%, 100% 100%,0 100% ); */
+    
+    
+}
