@@ -50,6 +50,33 @@ const AboutUs = forwardRef<HTMLDivElement>((props, ref) => {
     return () => clearInterval(timer);
   }, []);
 
+  const renderContent = () => {
+    const activeContent = content[activeTab];
+    if (activeContent.text) {
+      return <p className="text-white leading-relaxed">{activeContent.text}</p>;
+    } else if (activeContent.facts && activeContent.facts.length > 0) {
+      return (
+        <ul className="list-disc list-inside text-white space-y-2">
+          {activeContent.facts.map((fact, index) => (
+            <li
+              key={index}
+              className="transition-all duration-300 ease-in-out"
+              style={{
+                opacity: 1,
+                transform: 'translateX(0)',
+                transition: 'opacity 300ms, transform 300ms',
+                transitionDelay: `${index * 100}ms`,
+              }}
+            >
+              {fact}
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    return null;
+  };
+
   return (
     <div ref={ref} className="px-4 md:px-40 py-10 bg-[rgb(26,26,26)]">
       <h2 className="text-white text-4xl font-bold mb-8 text-center">About Serenity</h2>
@@ -79,26 +106,7 @@ const AboutUs = forwardRef<HTMLDivElement>((props, ref) => {
       >
         <div className="w-1/2 pr-8">
           <h3 className="text-2xl font-bold text-white mb-4">{content[activeTab].title}</h3>
-          {content[activeTab].text ? (
-            <p className="text-white leading-relaxed">{content[activeTab].text}</p>
-          ) : content[activeTab].facts ? (
-            <ul className="list-disc list-inside text-white space-y-2">
-              {content[activeTab].facts.map((fact, index) => (
-                <li
-                  key={index}
-                  className="transition-all duration-300 ease-in-out"
-                  style={{
-                    opacity: 1,
-                    transform: 'translateX(0)',
-                    transition: 'opacity 300ms, transform 300ms',
-                    transitionDelay: `${index * 100}ms`,
-                  }}
-                >
-                  {fact}
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          {renderContent()}
         </div>
         <div className="w-1/2">
           <img src={content[activeTab].image} alt={content[activeTab].title} className="w-full h-auto rounded-lg" />
