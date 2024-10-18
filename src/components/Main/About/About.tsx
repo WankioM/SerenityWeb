@@ -115,7 +115,7 @@ const AboutUs = forwardRef<HTMLDivElement>((props, ref) => {
 
       <div className="mt-12 text-center">
         <a 
-          href="https://play.google.com/store/apps/details?id=uk.co.serenity.guided.meditation&hl=en"
+          href="https://play.google.com/store/apps/details?id=com.serenity.flutter_application"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-3 bg-[#363636] text-white rounded-xl font-bold hover:bg-[#4a4a4a] transition-colors duration-300"

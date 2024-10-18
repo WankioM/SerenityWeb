@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, featuresRef }) => {
                 <a className="text-white text-sm font-medium leading-normal" href="#">Blog</a>
               </div>
               <a
-    href="https://play.google.com/store/apps/details?id=uk.co.serenity.guided.meditation&hl=en"
+    href="https://play.google.com/store/apps/details?id=com.serenity.flutter_application"
     target="_blank"
     rel="noopener noreferrer"
     className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-[#363636] text-white text-sm font-bold leading-normal tracking-[0.015em] no-underline hover:bg-[#4a4a4a] transition-colors duration-300"
