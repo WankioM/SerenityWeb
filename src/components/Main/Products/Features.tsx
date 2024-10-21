@@ -12,39 +12,39 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
     {
       title: "AGI Therapist",
       description: "Experience personalized mental health care through five unique AI personas. Choose from Dr. Emily, Dr. James, Dr. Sophia, Dr. Ethan, or Dr. Ava, each designed to address your specific emotional needs with 24/7 availability.",
-      imageUrl: ai,
+      imageUrl: 'https://serenity-gallery.s3.amazonaws.com/web_images/ai.png',
     },
     {
       title: "Meditation",
       description: "Discover inner peace with our variety of guided meditation practices. Designed for both beginners and experienced meditators, our sessions promote mindfulness, reduce stress, and enhance emotional well-being anytime, anywhere.",
-      imageUrl: meditation,
+      imageUrl: 'https://serenity-gallery.s3.amazonaws.com/web_images/meditation.png',
     },
     {
       title: "Rewards for Engagement",
       description: "Earn our native token through consistent engagement with the app. Use these tokens to unlock exclusive features or connect with the community, making your journey in the Serenity ecosystem even more rewarding.",
-      imageUrl: tasks,
+      imageUrl: "https://serenity-gallery.s3.amazonaws.com/web_images/tasks.png",
     },
     {
       title: "Daily Tasks",
       description: "Build positive habits with manageable daily goals. Complete tasks like journaling, mindfulness exercises, or gratitude entries. Track your progress, earn rewards, and strengthen your motivation to support your mental well-being.",
-      imageUrl: tasks,
+      imageUrl: "https://serenity-gallery.s3.amazonaws.com/web_images/tasks.png",
     },
     {
       title: "Community",
       description: "Connect with others in recovery through our safe and supportive community space. Share experiences, offer encouragement, and participate in discussions and virtual meetings to build meaningful relationships on your journey to sobriety.",
-      imageUrl: posts,
+      imageUrl: "https://serenity-gallery.s3.amazonaws.com/web_images/posts.png",
     },
     {
       title: "Quiz",
       description: "Challenge yourself with engaging quizzes designed to test and expand your knowledge on recovery. Learn more about sobriety, mental health, and personal growth in a fun, interactive way while earning rewards for your progress.",
-      imageUrl: quiz,
+      imageUrl: "https://serenity-gallery.s3.amazonaws.com/web_images/quizzy.png",
     }
   ];
 
   return (
-    <div ref={ref} className="px-40">
-      <h2 className="text-white text-[28px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Features</h2>
-      <div className="p-4 rounded-3xl border border-black/10 overflow-hidden bg-[rgba(26,26,26,0.2)]">
+    <div ref={ref} className="px-4 md:px-10 lg:px-40">
+      <h2 className="text-white text-2xl md:text-[28px] font-bold leading-tight tracking-[-0.015em] px-2 md:px-4 pb-3 pt-5">Features</h2>
+      <div className="p-2 md:p-4 rounded-3xl border border-black/10 overflow-hidden bg-[rgba(26,26,26,0.2)]">
         {features.map((feature, index) => (
           <FeatureCard
             key={index}

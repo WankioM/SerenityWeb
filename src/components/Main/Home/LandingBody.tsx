@@ -1,35 +1,35 @@
 import React from 'react';
-import backgroundImage from '../../../assets/bnw.jpg';
+const backgroundImage='https://serenity-gallery.s3.amazonaws.com/web_images/bnw.jpg'
+
 
 const LandingBody: React.FC = () => {
   return (
-    <div>
-     
-     
-
-     <div className="px-40 flex flex-1 justify-center py-5">
-            <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
-              <div className="@container">
-                <div className="@[480px]:p-4">
-                  <div
-                    className="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-end px-4 pb-10 @[480px]:px-10"
-                    style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url(${backgroundImage})` }}
-                  >
-                    <h1
-                      className="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] text-center"
-                    >
-                      Your personal AI therapist. Your personal AI therapist for anxiety, depression, addiction, and more.
-                    </h1>
-                    <div className="flex-wrap gap-3 flex">
-                      
-                    </div>
-                  </div>
-                </div>
+    <div className="bg-[rgb(26,26,26)]">
+      <div className="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10 md:py-20">
+        <div className="layout-content-container flex flex-col max-w-[1200px] w-full">
+          <div className="@container">
+            <div className="p-2 md:p-4">
+              <div
+                className="flex min-h-[400px] md:min-h-[600px] flex-col gap-6 md:gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center px-4 py-10 md:px-10 md:py-20 text-center"
+                style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.7) 100%), url(${backgroundImage})` }}
+              >
+                <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                  Empowering Global Change, One Venture at a Time
+                </h1>
+                <p className="text-white text-lg md:text-xl lg:text-2xl max-w-3xl">
+                  We are a venture studio with roots in Africa, building transformative solutions that solve real-world challenges.
+                </p>
+                <a
+                  href="#about" // Replace with the actual link to your About section
+                  className="mt-4 inline-block px-8 py-3 bg-white text-[rgb(26,26,26)] text-lg font-bold rounded-full hover:bg-opacity-90 transition-colors duration-300"
+                >
+                  Learn More
+                </a>
               </div>
-           
             </div>
           </div>
-          
+        </div>
+      </div>
     </div>
   );
 };

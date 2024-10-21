@@ -7,7 +7,7 @@ interface ScreenshotCardProps {
 const ScreenshotCard: React.FC<ScreenshotCardProps> = ({ imageUrl }) => (
   <div className="flex flex-col gap-3">
     <div
-      className="w-full h-96 bg-center bg-no-repeat bg-cover rounded-xl"
+      className="w-full h-48 md:h-72 lg:h-96 bg-center bg-no-repeat bg-cover rounded-xl"
       style={{ backgroundImage: `url("${imageUrl}")` }}
     />
   </div>
