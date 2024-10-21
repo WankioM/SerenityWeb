@@ -12,7 +12,7 @@ const teamMembers: TeamMember[] = [
   { name: "Viral Shah", role: "Co-Founder - CTO", photo: "/path/to/viral-photo.jpg", description: "" },
   { name: "Glen Ayienda", role: "Full Stack Engineer", photo: "/path/to/glen-photo.jpg", description: "" },
   { name: "Tracy Wankio", role: "Full Stack Developer", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Screenshot+2024-01-15+141121.png", description: "" },
-  { name: "Christopher Ndugo", role: "Role", photo: "/path/to/christopher-photo.jpg", description: "" },
+  { name: "Christopher Ndugo", role: "", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Christopher_im.png", description: "" },
   { name: "Brenda Kosgei", role: "Legal & Compliance", photo: "/path/to/brenda-photo.jpg", description: "" },
   { name: "Purity Githigia", role: "Finance", photo: "/path/to/purity-photo.jpg", description: "" },
 ];
