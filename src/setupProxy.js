@@ -17,7 +17,7 @@ module.exports = function(app) {
   app.use(
     '/.well-known/assetlinks.json',
     createProxyMiddleware({
-      target: process.env.REACT_APP_PROXY_TARGET || 'https://your-production-url.com',
+      target: 'https://serenity.dvtechventures.com',
       changeOrigin: true,
       onProxyRes: function(proxyRes, req, res) {
         proxyRes.headers['Content-Type'] = 'application/json';
@@ -25,7 +25,8 @@ module.exports = function(app) {
       },
       onError: function(err, req, res) {
         console.error('Proxy Error:', err);
-        res.status(500).json({ error: 'Proxy error' });
+        // Serve local file as fallback if proxy fails
+        res.sendFile(path.join(__dirname, '../public/.well-known/assetlinks.json'));
       }
     })
   );
