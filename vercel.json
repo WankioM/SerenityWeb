@@ -1,15 +1,18 @@
 {
+  "version": 2,
   "routes": [
     {
-      "src": "^/static/(.*)",
-      "dest": "/static/$1",
+      "src": "/manifest.json",
+      "dest": "/manifest.json",
       "headers": {
-        "cache-control": "public, max-age=31536000, immutable"
+        "Content-Type": "application/manifest+json",
+        "Access-Control-Allow-Origin": "*",
+        "cache-control": "no-cache"
       }
     },
     {
-      "src": "^/assets/(.*)",
-      "dest": "/assets/$1",
+      "src": "^/static/(.*)",
+      "dest": "/static/$1",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       }
@@ -27,22 +30,12 @@
       "dest": "/favicon.ico"
     },
     {
-      "src": "^/manifest.json",
-      "dest": "/manifest.json",
-      "headers": {
-        "Content-Type": "application/manifest+json"
-      }
-    },
-    {
       "src": "^/logo(.*).png",
       "dest": "/logo$1.png"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html",
-      "headers": {
-        "cache-control": "public, max-age=0, must-revalidate"
-      }
+      "dest": "/index.html"
     }
   ],
   "builds": [
@@ -50,13 +43,8 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build",
-        "installCommand": "npm install",
-        "buildCommand": "npm run build"
+        "distDir": "build"
       }
     }
-  ],
-  "github": {
-    "silent": true
-  }
+  ]
 }
