@@ -1,16 +1,41 @@
 {
-    "routes": [
-      {
-        "src": "/.well-known/assetlinks.json",
-        "dest": "/.well-known/assetlinks.json",
-        "headers": {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*"
-        }
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "^/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/.well-known/assetlinks.json",
+      "dest": "/.well-known/assetlinks.json",
+      "headers": {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       }
-    ]
-  }
+    },
+    {
+      "src": "^/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "^/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ]
+}
