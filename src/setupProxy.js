@@ -17,7 +17,7 @@ module.exports = function(app) {
   app.use(
     '/.well-known/assetlinks.json',
     createProxyMiddleware({
-      target: 'https://serenity.dvtechventures.com',
+      target: 'https://referral.dvtechventures.com',
       changeOrigin: true,
       onProxyRes: function(proxyRes, req, res) {
         proxyRes.headers['Content-Type'] = 'application/json';
