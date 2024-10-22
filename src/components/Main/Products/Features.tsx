@@ -110,7 +110,7 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
         >
           <div className="flex items-center justify-between">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-3 transition-colors duration-300 ">
+              <h2 className="text-2xl md:text-5xl font-bold text-white mb-3 transition-colors duration-300 ">
                 Features of the Serenity App
               </h2>
               <p className="text-white/70 text-lg transition-colors duration-300 group-hover:text-white/90">
