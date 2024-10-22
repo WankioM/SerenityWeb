@@ -3,7 +3,7 @@
   "routes": [
     {
       "src": "/manifest.json",
-      "dest": "/manifest.json",
+      "dest": "/public/manifest.json",
       "headers": {
         "Content-Type": "application/manifest+json",
         "Access-Control-Allow-Origin": "*",
@@ -12,30 +12,49 @@
     },
     {
       "src": "^/static/(.*)",
-      "dest": "/static/$1",
+      "dest": "/build/static/$1",
       "headers": {
         "cache-control": "public, max-age=31536000, immutable"
       }
     },
     {
+      "src": "/favicon.ico",
+      "dest": "/public/favicon.ico"
+    },
+    {
+      "src": "/logo([0-9]+).png",
+      "dest": "/public/logo$1.png"
+    },
+    {
+      "src": "/asset-manifest.json",
+      "dest": "/build/asset-manifest.json"
+    },
+    {
+      "src": "^/(.+\\.js)$",
+      "dest": "/build/$1"
+    },
+    {
+      "src": "^/(.+\\.css)$",
+      "dest": "/build/$1"
+    },
+    {
+      "src": "^/(.+\\.png)$",
+      "dest": "/build/$1"
+    },
+    {
       "src": "/.well-known/assetlinks.json",
-      "dest": "/.well-known/assetlinks.json",
+      "dest": "/public/.well-known/assetlinks.json",
       "headers": {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
       }
     },
     {
-      "src": "^/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "^/logo(.*).png",
-      "dest": "/logo$1.png"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/build/index.html"
     }
   ],
   "builds": [
@@ -43,8 +62,11 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "build"
+        "distDir": "build",
+        "installCommand": "npm install",
+        "buildCommand": "npm run build"
       }
     }
-  ]
+  ],
+  "outputDirectory": "build"
 }
