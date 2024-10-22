@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png';
+
 
 interface HeaderProps {
   aboutRef: React.RefObject<HTMLDivElement>;
@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, featuresRef }) => {
       <Link to="/" className="flex items-center gap-2 sm:gap-4 text-white no-underline hover:opacity-80 transition-opacity duration-300">
           <div className="w-8 h-8 sm:w-10 sm:h-10 relative">
             <img 
-              src={logo} 
+              src='https://serenity-gallery.s3.amazonaws.com/web_images/logo.png' 
               alt="DV Tech Ventures Logo" 
               className="absolute top-0 left-0 w-full h-full object-contain"
             />
@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ aboutRef, featuresRef }) => {
           <div className="flex items-center gap-4 lg:gap-9">
             <button onClick={() => scrollToSection(aboutRef)} className="text-white text-sm font-medium leading-normal bg-transparent border-none cursor-pointer">About</button>
             <button onClick={() => scrollToSection(featuresRef)} className="text-white text-sm font-medium leading-normal bg-transparent border-none cursor-pointer">Features</button>
-            <a className="text-white text-sm font-medium leading-normal" href="#">Blog</a>
+           { /*<a className="text-white text-sm font-medium leading-normal" href="#">Blog</a>*/}
           </div>
           <a
             href="https://play.google.com/store/apps/details?id=com.serenity.flutter_application"

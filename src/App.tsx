@@ -16,10 +16,10 @@ const App: React.FC = () => {
           <div className="layout-container flex h-full grow flex-col">
             <Header aboutRef={aboutRef} featuresRef={featuresRef} />
             <Routes>
-              <Route path="/" element={<MainContent featuresRef={featuresRef} />} />
+              <Route path="/" element={<MainContent featuresRef={featuresRef} aboutRef={aboutRef} />} />
             </Routes>
             <AboutUs ref={aboutRef} />
-            <Footer />
+            <Footer featuresRef={featuresRef} aboutRef={aboutRef} />
           </div>
         </div>
       </div>

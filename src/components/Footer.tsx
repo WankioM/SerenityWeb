@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import EmailPopup from './Main/Contact/EmailPopUp';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  featuresRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;
+}
+
+const Footer: React.FC<FooterProps> = ({ featuresRef, aboutRef }) => {
   const [isEmailPopupOpen, setIsEmailPopupOpen] = useState(false);
 
-  const toggleEmailPopup = () => {
-    setIsEmailPopupOpen(!isEmailPopupOpen);
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
   };
+ 
 
   return (
     <footer className="bg-[rgba(26,26,26,0.2)] border-t border-black/10">
@@ -20,13 +26,42 @@ const Footer: React.FC = () => {
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-white/80 text-sm hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="text-white/80 text-sm hover:text-white transition-colors">Features</a></li>
-              <li><a href="#" className="text-white/80 text-sm hover:text-white transition-colors">About Us</a></li>
-              <li><button onClick={toggleEmailPopup} className="text-white/80 text-sm hover:text-white transition-colors">Contact</button></li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection(featuresRef)} 
+                  className="text-white/80 text-sm hover:text-white transition-colors"
+                >
+                  Features
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection(aboutRef)} 
+                  className="text-white/80 text-sm hover:text-white transition-colors"
+                >
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button 
+                  className="text-white/80 text-sm hover:text-white transition-colors"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
           <div className="flex flex-col">
             <h3 className="text-white text-lg font-bold mb-4">Connect</h3>
+            <ul>
+            <li>
+                <button 
+                  className="text-white/80 text-sm hover:text-white transition-colors"
+                >
+                  hello@dvtech.com
+                </button>
+              </li>
+            </ul>
             <div className="flex space-x-4">
               {/* Social media icons... */}
             </div>

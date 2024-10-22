@@ -1,8 +1,20 @@
 import React from 'react';
 const backgroundImage='https://serenity-gallery.s3.amazonaws.com/web_images/bnw.jpg'
 
+interface LandingBodyProps {
+  aboutRef: React.RefObject<HTMLDivElement>;
+}
 
-const LandingBody: React.FC = () => {
+const LandingBody: React.FC<LandingBodyProps> = ({ aboutRef }) => {
+
+  const handleLearnMoreClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    aboutRef.current?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  };
+
   return (
     <div className="bg-[rgb(26,26,26)]">
       <div className="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10 md:py-20">
@@ -19,12 +31,12 @@ const LandingBody: React.FC = () => {
                 <p className="text-white text-lg md:text-xl lg:text-2xl max-w-3xl">
                   We are a venture studio with roots in Africa, building transformative solutions that solve real-world challenges.
                 </p>
-                <a
-                  href="#about" // Replace with the actual link to your About section
+                <button
+                onClick={handleLearnMoreClick}
                   className="mt-4 inline-block px-8 py-3 bg-white text-[rgb(26,26,26)] text-lg font-bold rounded-full hover:bg-opacity-90 transition-colors duration-300"
                 >
                   Learn More
-                </a>
+                </button>
               </div>
             </div>
           </div>

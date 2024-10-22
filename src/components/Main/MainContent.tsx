@@ -7,12 +7,13 @@ import Contact from './Contact/Contact';
 
 interface MainContentProps {
   featuresRef: React.RefObject<HTMLDivElement>;
+  aboutRef: React.RefObject<HTMLDivElement>;  
 }
 
-const MainContent: React.FC<MainContentProps> = ({ featuresRef }) => {
+const MainContent: React.FC<MainContentProps> = ({ featuresRef, aboutRef }) => {
   return (
     <div>
-      <LandingBody />
+      <LandingBody aboutRef={aboutRef}  />
       <WhatWeDo />
       <Features ref={featuresRef} />
       <OurTeam />
