@@ -1,0 +1,12 @@
+[
+    {
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.serenity.flutter_application",
+        "sha256_cert_fingerprints": [
+          "E0:22:BB:84:05:73:DD:9C:87:DD:ED:F1:E7:A4:BE:09:00:03:61:22:47:20:A0:4A:44:B8:79:99:5E:41:6A:F1"
+        ]
+      }
+    }
+  ]

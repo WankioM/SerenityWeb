@@ -69,7 +69,7 @@ const Features = forwardRef<HTMLDivElement>((props, ref) => {
 
   const features: Feature[] = [
     {
-      title: "AGI Therapist",
+      title: "Virtual Therapist",
       description: "Experience personalized mental health care through five unique AI personas. Choose from Dr. Emily, Dr. James, Dr. Sophia, Dr. Ethan, or Dr. Ava, each designed to address your specific emotional needs with 24/7 availability.",
       imageUrl: 'https://serenity-gallery.s3.amazonaws.com/web_images/ai.png',
     },
