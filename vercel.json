@@ -22,5 +22,10 @@
       "source": "/.well-known/assetlinks.json",
       "destination": "/api/well-known/assetlinks.json"
     }
+  ],
+  "domains": [
+    "www.dvtechventures.com",
+    "referral.dvtechventures.com",
+    "serenity.dvtechventures.com"
   ]
 }
