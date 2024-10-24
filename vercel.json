@@ -16,11 +16,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/.well-known/assetlinks.json",
-      "destination": "/api/well-known/assetlinks.json"
-    }
   ]
 }
