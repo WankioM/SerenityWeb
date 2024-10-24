@@ -10,7 +10,7 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   { name: "Dr. David Muguku", role: "Co-Founder - CEO", photo: "/path/to/david-photo.jpg", description: "" },
   { name: "Viral Shah", role: "Co-Founder - CTO", photo: "/path/to/viral-photo.jpg", description: "" },
-  { name: "Glen Ayienda", role: "Full Stack Engineer", photo: "/path/to/glen-photo.jpg", description: "" },
+  { name: "Glen Ayienda", role: "Full Stack Engineer", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/web_images/glencrop.jpg", description: "" },
   { name: "Tracy Wankio", role: "Full Stack Developer", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Screenshot+2024-01-15+141121.png", description: "" },
   { name: "Christopher Ndugo", role: "Software Engineer", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Christopher_im.png", description: "" },
   { name: "Brenda Kosgei", role: "Legal & Compliance", photo: "/path/to/brenda-photo.jpg", description: "" },
