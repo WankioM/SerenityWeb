@@ -42,13 +42,7 @@ const Footer: React.FC<FooterProps> = ({ featuresRef, aboutRef }) => {
                   About Us
                 </button>
               </li>
-              <li>
-                <button 
-                  className="text-white/80 text-sm hover:text-white transition-colors"
-                >
-                  Contact
-                </button>
-              </li>
+            
             </ul>
           </div>
           <div className="flex flex-col">

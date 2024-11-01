@@ -8,13 +8,13 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  { name: "Dr. David Muguku", role: "Co-Founder - CEO", photo: "/path/to/david-photo.jpg", description: "" },
-  { name: "Viral Shah", role: "Co-Founder - CTO", photo: "/path/to/viral-photo.jpg", description: "" },
+  { name: "Dr. David Muguku", role: "Co-Founder - CEO", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/David.jpg", description: "" },
+  { name: "Viral Shah", role: "Co-Founder - CTO", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/Viral2.jpg", description: "" },
   { name: "Glen Ayienda", role: "Full Stack Engineer", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/web_images/glencrop.jpg", description: "" },
   { name: "Tracy Wankio", role: "Full Stack Developer", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Screenshot+2024-01-15+141121.png", description: "" },
   { name: "Christopher Ndugo", role: "Software Engineer", photo: "https://serenity-gallery.s3.amazonaws.com/web_images/Christopher_im.png", description: "" },
-  { name: "Brenda Kosgei", role: "Legal & Compliance", photo: "/path/to/brenda-photo.jpg", description: "" },
-  { name: "Purity Githigia", role: "Finance", photo: "/path/to/purity-photo.jpg", description: "" }
+  { name: "Brenda Kosgei", role: "Legal & Compliance", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/Brenda.jpeg", description: "" },
+  { name: "Purity Githigia", role: "Finance", photo: "https://serenity-gallery.s3.us-east-1.amazonaws.com/purity.jpeg", description: "" }
 ];
 
 const OurTeam: React.FC = () => {
