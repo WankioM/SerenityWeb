@@ -42,6 +42,16 @@ const Footer: React.FC<FooterProps> = ({ featuresRef, aboutRef }) => {
                   About Us
                 </button>
               </li>
+
+              
+              <li>
+                <a 
+                  href="/privacy-policy" 
+                  className="text-white/80 text-sm hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
             
             </ul>
           </div>

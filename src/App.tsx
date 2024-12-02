@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import MainContent from './components/Main/MainContent';
 import AboutUs from './components/Main/About/About';
+import PrivacyPolicy from './components/Main/Home/PrivacyPolicy';
 
 const App: React.FC = () => {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -16,9 +17,14 @@ const App: React.FC = () => {
           <div className="layout-container flex h-full grow flex-col">
             <Header aboutRef={aboutRef} featuresRef={featuresRef} />
             <Routes>
-              <Route path="/" element={<MainContent featuresRef={featuresRef} aboutRef={aboutRef} />} />
+              <Route path="/" element={
+                <>
+                  <MainContent featuresRef={featuresRef} aboutRef={aboutRef} />
+                  <AboutUs ref={aboutRef} />
+                </>
+              } />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             </Routes>
-            <AboutUs ref={aboutRef} />
             <Footer featuresRef={featuresRef} aboutRef={aboutRef} />
           </div>
         </div>
