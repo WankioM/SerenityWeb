@@ -46,7 +46,7 @@ const Footer: React.FC<FooterProps> = ({ featuresRef, aboutRef }) => {
               
               <li>
                 <a 
-                  href="/terms-and-policy" 
+                  href="/TandCs" 
                   className="text-white/80 text-sm hover:text-white transition-colors"
                 >
                   Terms of Use, User Policy, and Privacy Policy
