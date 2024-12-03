@@ -23,7 +23,7 @@ const App: React.FC = () => {
                   <AboutUs ref={aboutRef} />
                 </>
               } />
-              <Route path="/privacy-policy" element={<TermsAndPolicy />} />
+              <Route path="/terms-and-policy" element={<TermsAndPolicy />} />
             </Routes>
             <Footer featuresRef={featuresRef} aboutRef={aboutRef} />
           </div>

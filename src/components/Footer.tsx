@@ -46,10 +46,10 @@ const Footer: React.FC<FooterProps> = ({ featuresRef, aboutRef }) => {
               
               <li>
                 <a 
-                  href="/privacy-policy" 
+                  href="/terms-and-policy" 
                   className="text-white/80 text-sm hover:text-white transition-colors"
                 >
-                  Privacy Policy
+                  Terms of Use, User Policy, and Privacy Policy
                 </a>
               </li>
             
